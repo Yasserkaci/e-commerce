@@ -1,6 +1,5 @@
 //Packages
 import express from "express";
-import path from "path";
 import "dotenv/config";
 import cookieParser from "cookie-parser";
 import cors from "cors"
@@ -19,7 +18,7 @@ app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
-app.use("/api/user", userRoutes)
+app.use("/api/users", userRoutes)
 
 
 app.listen(port, ()=> console.log(`Server Up listening to port: ${port}`))
